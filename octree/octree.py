@@ -238,7 +238,7 @@ class Octree:
                 continue
             if node.is_leaf:
                 for p in node.points:
-                    if _dist2(p, c) <= r2 + _EPS:
+                    if _dist2(p, c) <= r2:
                         out.append(p)
             else:
                 stack.extend(node.children)  # type: ignore[arg-type]
